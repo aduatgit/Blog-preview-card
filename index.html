@@ -7,12 +7,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Blog preview card</title>
-
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-top: 25px; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
@@ -20,18 +24,25 @@
   <article>
     <div class="card">
 
-      <img src="/assets/images/illustration-article.svg" alt="">
-      <span class="card-type">Learn</span>
-      <p class="date">Published 21 Dec 2023</p>
-      <div class="description">
-        <a class="description__title" href="#">HTML & CSS foundations</a>
-        <p class="description__text">These languages are the backbone of every website, defining structures, content, and presentation.</p>
+      <img class="card__image" src="/assets/images/illustration-article.svg" alt="artistic image of html">
+      <div class="card__description">
+        <div class="container">
+          <span class="card__type">Learning</span>
+        </div>
+        <div class="container">
+          <p class="card__date">Published 21 Dec 2023</p>
+        </div>
+        <div class="container">
+          <a class="card__description_title" href="#">HTML & CSS foundations</a>
+          <p class="card__description_text">These languages are the backbone of every website, defining structures, content, and presentation.</p>
+        </div>
       </div>
-
       <div class="author">
-        <img src="assets/images/image-avatar.webp" alt="man" class="author">
-        <p class="name">Greg Hooper</p>
+        <div class="container"><img src="assets/images/image-avatar.webp" alt="man" class="author"></div>
+        <div class="container"><p class="name">Greg Hooper</p></div>
       </div>
+      
+
 
     </div>
   </article>

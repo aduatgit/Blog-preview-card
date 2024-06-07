@@ -8,15 +8,124 @@
     --clr-primary: hsl(47,88%,63%);
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-neutral-400: hsl(0, 0%, 50%);
-    --clr-neutral-900: Black: hsl(0, 0%, 7%);
+    --clr-neutral-900: hsl(0, 0%, 7%);
 
-    --fs: 1em;
+    --fs: 0.875rem;
 
-    --ff: "Figtree", sans
+    --ff: "Figtree", sans-serif;
+
+    --fw-500: 500;
+    --fw-800: 800;
 }
 
 body {
     font-family: var(--ff);
     background-color: var(--clr-primary);
+    font-weight: var(--fw-500);
+    font-size: var(--fs);
 }
 
+.card {
+    margin-inline: auto;
+    margin-top: 20vh;
+    background-color: var(--clr-neutral-100);
+    width: 384px;
+    border: 1px solid var(--clr-neutral-900);
+    border-radius: 1em;
+    box-shadow: .5em .5em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:420px) {
+    .card {
+        max-width: 320px;
+    }
+}
+
+
+    
+.card__image {
+    margin: 24px;
+    margin-bottom: 28px;
+    border-radius: 1em;
+}
+
+.card__description {
+    margin: 0 24px 24px 24px;
+}
+
+.card__type {
+    display: inline;
+    background-color: var(--clr-primary);
+    padding: .5rem 0.75rem;
+    font-weight: var(--fw-800);
+    border-radius: .3rem;
+}
+
+.card__date {
+    padding-top: 12px;
+}
+
+@media (max-width:420px) {
+    .card__date {
+        font-size: 0.675rem;
+    }
+}
+
+.card__description_title {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--clr-neutral-900);
+    font-weight: var(--fw-800);
+}
+
+@media (max-width:420px) {
+    .card__description_title {
+        font-size: 1.2rem;
+    }
+}
+
+.card__description_title:is(:hover, :focus) {
+    color: var(--clr-primary);
+}
+
+.card__description_text {
+    color: var(--clr-neutral-400);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+    .card__description_text {
+        font-size: .8rem;
+    }
+}
+
+
+.author {
+    margin-left: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    max-height: 32px; 
+    justify-content: left;
+    align-items: center;
+    gap: 1em;
+}
+
+.author img {
+    margin: 0;
+}
+
+.name {
+    font-size: 1rem;
+    display: inline;
+    font-weight: var(--fw-800);
+}
+
+@media (max-width:420px) {
+    .name {
+        font-size: .8rem;
+    }
+}
